@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Subtraction Teaching</title>
+
+  <!-- CSS  -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+  
+  
+  .test{
+  	display:none;
+  	width:60%;
+  }
+  #scores{
+  	display:none;
+  	height:10%;
+  	width:60%;
+  }
+  #heading{
+  	display:none;
+  	width:60%;
+  }
+  #modalheader2{
+  /*	background-color:#E0FFFF;
+  */}
+  #digits{
+  	width:90%;
+  }
+  .icon2{
+  	height:5em;
+  	width :5em;
+  }
+  #status{
+  		display:none;
+  		position:absolute;
+  		right:10%;
+  		top : 20%;
+  		width:30%;
+  	}
+  .digits1,.digits2{
+  	width:45%;
+  	margin:auto;
+  	font-size:3em;
+  	color:purple
+  	}
+.answer_lab{
+	width:30%;
+}
+
+  	.images{
+		 
+    width: 8%;
+    height: 8%;
+    
+
+  </style>
+
+</head>
+<body>
+	
+	<div class = "modal" id = "modal1">
+		<div class="modal-content">
+    <h4 id = "modalheader2"><center>LEVEL ---->  1</center></h4>
+    <center><p id = "modalfoot2">ATTEMPT ALL 5 QUESTIONS TO PROCEED TO NEXT LEVEL  ! ALL THE BEST :D</center></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+	</div>  
+
+	<div class = "modal" id = "correct">
+		<div class="mod">
+    <h4 id = "moda"><center>You Have Completed Your First Level Succesfully</center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+	</div>  
+	<div class = "modal" id = "incorrect">
+		<div class="mod">
+    <h4 id = "moda"><center>Sorry!! You Must do it again</center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+	</div>
+  <nav class="light-blue ghten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src = "3.png" width="90" height="90" id="logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Level 1</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <h3><li><a href="#">Level 1---> Learn to COUNT</a></li></h3>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+      </nav>
+
+
+      <div id = "scores" class = "center">
+      	<div class = "row">
+      		<div class = "col s4">
+      		      <h4 class="header center purple-text" >Questions Asked</h4><BR>
+      		            <h4 class="header center red-text" id = "tq1">0</h4>
+      		</div>
+      		<div class = "col s4">
+      		      <h4 class="header center purple-text" >Correct Answers</h4><BR>
+      		            <h4 class="header center red-text" id = "tac1">0</h4>
+      		</div>
+      		<div class = "col s4">
+      		      <h4 class="header center purple-text" >Wrong Answers</h4><BR>
+      		            <h4 class="header center red-text" id = "twa1">0</h4>
+      		</div>	
+      	</div>
+
+      </div>
+
+
+      <h3 class="header center black-text" id = "heading">Count the number of dolls</h3>
+  
+
+       <div id = 'test1' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '11'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer1" type="text" class="validate">
+          <label for="your_answer1" blue-text>Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+  
+
+  	<div id = 'test2' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '21'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '22'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer2" type="text" class="validate">
+          <label for="your_answer2">Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+  <div id = 'test3' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '31'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '32'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '33'></img>
+
+  		<div class="input-field col answer-id">
+          <input id="your_answer3" type="text" class="validate">
+          <label for="your_answer3">Your Answer</label>
+        </div>
+        <a  class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+
+  </div>
+
+
+
+<div id = 'test4' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '41'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '42'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '43'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '44'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer4" type="text" class="validate">
+          <label for="your_answer4">Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+<div id = 'test5' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '51'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '52'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '53'></img><BR>
+  		<img src = 'icon2.png' class = "icon2" id = '54'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '55'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer5" type="text" class="validate">
+          <label for="your_answer5">Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+  <div id = 'test6' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '61'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '62'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '63'></img><BR>
+  		<img src = 'icon2.png' class = "icon2" id = '64'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '65'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '66'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer6" type="text" class="validate">
+          <label for="your_answer6">Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+
+  <div id = 'test7' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '71'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '72'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '73'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '74'></img><BR>
+  		<img src = 'icon2.png' class = "icon2" id = '75'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '76'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '77'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer7" type="text" class="validate">
+          <label for="your_answer7">Your Answer</label>
+        </div>
+        <a class="answer-btn btn waves-effect waves-light orange">Go</a>
+          <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+
+
+  <div id = 'test8' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '81'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '82'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '83'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '84'></img><BR>
+  		<img src = 'icon2.png' class = "icon2" id = '85'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '86'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '87'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '88'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer8" type="text" class="validate">
+          <label for="your_answer8">Your Answer</label>
+        </div>
+        <a class="btn waves-effect waves-light orange answer-btn">Go</a>
+        <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+
+  <div id = 'test9' class = "test center">
+  		<img src = 'icon2.png' class = "icon2" id = '91'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '92'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '93'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '94'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '95'></img><BR>
+  		<img src = 'icon2.png' class = "icon2" id = '96'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '97'></img>
+  		<img src = 'icon2.png' class = "icon2" id = '98'></img>
+  		<img src =  class = "icon2" id = '99'></img>
+  		<div class="input-field col answer-id">
+          <input id="your_answer9" type="text" class="validate">
+          <label for="your_answer9">Your Answer</label>
+        </div>
+        <a class="btn waves-effect waves-light orange answer-btn">Go</a>
+        <center>
+      <div class = "ans_status"></div>
+    </center>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div id = "digits" class = "row">
+      <h2 class="header center orange-text" id = "welcome">Numbers and their values</h2>
+    	<div class ="digits1 col s6">
+    		0<BR>
+    		</div>
+    		<div class = "digits2 col s6">
+    		1 <img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits1 col s6">
+    		2 <img src = "s.jpg" class = "images">
+    			
+    		</img><img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits2 col s6">
+    		3 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits1 col s6">
+    		4 <img src = "s.jpg" class = "images"></img>
+    		
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits2 col s6">
+    		
+    		5 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits1 col s6">
+    		6 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits2 col s6">
+    		7 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img><BR>
+    		</div>
+    		<div class = "digits1 col s6">
+    		8 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<BR>
+    		</div>
+    		<div class = "digits2 col s6">
+    		9 <img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<img src = "s.jpg" class = "images"></img>
+    		<BR>
+    		
+    	</div>
+    	
+
+    	<center>
+    	<a name="download-button" class="btn waves-effect waves-light orange" id="download-button"><strong><em>LEVEL 1-----&gt; START </em></strong></a>
+    	</center>
+    	</div>
+    	 <div id = "status">
+  	Levels Completed Yet: 0/4<p>
+  	
+  	
+  	
+
+    <script src="a.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type = "text/javascript">
+  	
+  	
+
+  	$('document').ready(function(){
+  		function fun(random){
+  				
+}
+  		var arr = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+  		var questions = 0;
+  		var ac = 0;
+  		var wa = 0;
+  		var random;
+  		var prev = 11;
+  		var fff = 0;
+
+
+
+  		$('#modal1').openModal();
+  		$('#download-button').click(function(){
+
+  				
+
+  				random = Math.round(((Math.random())*10)) ;
+  				random = (random%9)+1;
+  				//random = 5;
+					
+  				
+  				setTimeout(function(){ 
+  					
+  					$('.ans_status').text('try to count from 1'); }, 6000);
+  				setTimeout(function(){ 
+
+  					$('.ans_status').text('ok Count with me'); }, 12000);
+  				setTimeout(function(){
+  					fff  = 1;
+  					switch(random){
+  					case 1:
+  						$('.ans_status').text('1');
+  						$('#11').fadeOut(4000,'linear',function(){
+  							$('#11').fadeIn();
+  						});
+  						break;
+  					case 2:
+  					$('.ans_status').text('1');
+  					$('#21').fadeOut(1500,'linear',function(){
+  							$('#21').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+  								$('#22').fadeOut(1500,'linear',function(){
+  									$('#22').fadeIn();
+  								});
+
+  							});
+  						});
+  						break;
+  					case 3:
+  					$('.ans_status').text('1');
+  					$('#31').fadeOut(1500,'linear',function(){
+  							$('#31').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#32').fadeOut(1500,'linear',function(){
+  							$('#32').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#33').fadeOut(1500,'linear',function(){
+  							$('#33').fadeIn();  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 4:
+  						$('.ans_status').text('1');
+  					$('#41').fadeOut(1500,'linear',function(){
+  							$('#41').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#42').fadeOut(1500,'linear',function(){
+  							$('#42').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#43').fadeOut(1500,'linear',function(){
+  							$('#43').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#44').fadeOut(1500,'linear',function(){
+  							$('#44').fadeIn();  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						
+  						case 5:
+  						$('.ans_status').text('1');
+  					$('#51').fadeOut(1500,'linear',function(){
+  							$('#51').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#52').fadeOut(1500,'linear',function(){
+  							$('#52').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#53').fadeOut(1500,'linear',function(){
+  							$('#53').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#54').fadeOut(1500,'linear',function(){
+  							$('#54').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#55').fadeOut(1500,'linear',function(){
+  							$('#55').fadeIn();  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 6:
+  						$('.ans_status').text('1');
+  					$('#61').fadeOut(1500,'linear',function(){
+  							$('#61').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#62').fadeOut(1500,'linear',function(){
+  							$('#62').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#63').fadeOut(1500,'linear',function(){
+  							$('#63').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#64').fadeOut(1500,'linear',function(){
+  							$('#64').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#65').fadeOut(1500,'linear',function(){
+  							$('#65').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#66').fadeOut(1500,'linear',function(){
+  							$('#66').fadeIn();  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 7:
+  						$('.ans_status').text('1');
+  					$('#71').fadeOut(1500,'linear',function(){
+  							$('#71').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#72').fadeOut(1500,'linear',function(){
+  							$('#72').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#73').fadeOut(1500,'linear',function(){
+  							$('#73').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#74').fadeOut(1500,'linear',function(){
+  							$('#74').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#75').fadeOut(1500,'linear',function(){
+  							$('#75').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#76').fadeOut(1500,'linear',function(){
+  							$('#76').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#77').fadeOut(1500,'linear',function(){
+  							$('#77').fadeIn();  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+
+  						break;
+  						case 8:
+  						$('.ans_status').text('1');
+  					$('#81').fadeOut(1500,'linear',function(){
+  							$('#81').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#82').fadeOut(1500,'linear',function(){
+  							$('#82').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#83').fadeOut(1500,'linear',function(){
+  							$('#83').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#84').fadeOut(1500,'linear',function(){
+  							$('#84').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#85').fadeOut(1500,'linear',function(){
+  							$('#85').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#86').fadeOut(1500,'linear',function(){
+  							$('#86').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#87').fadeOut(1500,'linear',function(){
+  							$('#87').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('8');
+
+  								$('#88').fadeOut(1500,'linear',function(){
+  							$('#88').fadeIn();  						});
+  							});  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 9:
+  						$('.ans_status').text('1');
+  					$('#91').fadeOut(1500,'linear',function(){
+  							$('#91').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#92').fadeOut(1500,'linear',function(){
+  							$('#92').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#93').fadeOut(1500,'linear',function(){
+  							$('#93').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#94').fadeOut(1500,'linear',function(){
+  							$('#94').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#95').fadeOut(1500,'linear',function(){
+  							$('#95').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#96').fadeOut(1500,'linear',function(){
+  							$('#96').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#97').fadeOut(1500,'linear',function(){
+  							$('#97').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('8');
+
+  								$('#98').fadeOut(1500,'linear',function(){
+  							$('#98').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('9');
+
+  								$('#99').fadeOut(1500,'linear',function(){
+  							$('#99').fadeIn();  						});
+
+
+  						});  						});
+  							});  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  				}
+
+
+  				}, 14000);
+  				
+  				
+
+              $('.ans_status').show();
+              
+  				
+  				$('#download-button').hide();
+  				$('#status').show('slow');
+  				$('#test'+random).show("slow");
+  				$('#scores').show('slow');
+  				$('#heading').show('slow');
+  				$('#your_answer'+random).css('width','30%');
+  			});
+  		$('.answer-btn').click(function(){
+  			//var num = 0;
+  			
+  				//break lab;
+  				//num++;
+  			//alert("random = " + random+""+arr[1]+" "+arr[2]+" "+arr[3]+" "+arr[4]+" "+arr[5]+" "+arr[6]+" "+arr[7]+" "+arr[8]+" "+arr[9]);
+  			
+  			
+  			if(fff == 0)
+  			questions = questions+1;
+  			var ans = $('#your_answer'+random).val();
+  			$('#your_answer'+random).val('');
+
+  			if(ans == random)
+  				{
+  					if(fff == 0)
+  					ac = ac+1;
+              $('.ans_status').text('Answer Correct');
+                    $('.ans_status').css('color','green');
+          }
+  			else
+  				{
+  					if(fff == 0)
+  					wa = wa+1;
+  				  $('.ans_status').text('Wrong Answer');
+                    $('.ans_status').css('color','red');
+          }prev = random;
+  				$("#tq1").text(questions);
+  				$("#tac1").text(ac);
+  				$("#twa1").text(wa);
+  			random = Math.round(((Math.random())*10)) ;
+  				random = (random%9)+1;
+  				if(random == prev)
+  					random = (random+1)%9+1;
+  					fff = 0;
+  				setTimeout(function(){ $('.ans_status').text('try to count from 1'); }, 6000);
+  				setTimeout(function(){ $('.ans_status').text('ok Count with me'); }, 8000);
+  				setTimeout(function(){
+  					fff = 1;
+  					switch(random){
+  					case 1:
+  						$('.ans_status').text('1');
+  						$('#11').fadeOut(4000,'linear',function(){
+  							$('#11').fadeIn();
+  						});
+  						break;
+  					case 2:
+  					$('.ans_status').text('1');
+  					$('#21').fadeOut(1500,'linear',function(){
+  							$('#21').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+  								$('#22').fadeOut(1500,'linear',function(){
+  									$('#22').fadeIn();
+  								});
+
+  							});
+  						});
+  						break;
+  					case 3:
+  					$('.ans_status').text('1');
+  					$('#31').fadeOut(1500,'linear',function(){
+  							$('#31').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#32').fadeOut(1500,'linear',function(){
+  							$('#32').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#33').fadeOut(1500,'linear',function(){
+  							$('#33').fadeIn();  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 4:
+  						$('.ans_status').text('1');
+  					$('#41').fadeOut(1500,'linear',function(){
+  							$('#41').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#42').fadeOut(1500,'linear',function(){
+  							$('#42').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#43').fadeOut(1500,'linear',function(){
+  							$('#43').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#44').fadeOut(1500,'linear',function(){
+  							$('#44').fadeIn();  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						
+  						case 5:
+  						$('.ans_status').text('1');
+  					$('#51').fadeOut(1500,'linear',function(){
+  							$('#51').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#52').fadeOut(1500,'linear',function(){
+  							$('#52').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#53').fadeOut(1500,'linear',function(){
+  							$('#53').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#54').fadeOut(1500,'linear',function(){
+  							$('#54').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#55').fadeOut(1500,'linear',function(){
+  							$('#55').fadeIn();  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 6:
+  						$('.ans_status').text('1');
+  					$('#61').fadeOut(1500,'linear',function(){
+  							$('#61').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#62').fadeOut(1500,'linear',function(){
+  							$('#62').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#63').fadeOut(1500,'linear',function(){
+  							$('#63').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#64').fadeOut(1500,'linear',function(){
+  							$('#64').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#65').fadeOut(1500,'linear',function(){
+  							$('#65').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#66').fadeOut(1500,'linear',function(){
+  							$('#66').fadeIn();  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 7:
+  						$('.ans_status').text('1');
+  					$('#71').fadeOut(1500,'linear',function(){
+  							$('#71').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#72').fadeOut(1500,'linear',function(){
+  							$('#72').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#73').fadeOut(1500,'linear',function(){
+  							$('#73').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#74').fadeOut(1500,'linear',function(){
+  							$('#74').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#75').fadeOut(1500,'linear',function(){
+  							$('#75').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#76').fadeOut(1500,'linear',function(){
+  							$('#76').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#77').fadeOut(1500,'linear',function(){
+  							$('#77').fadeIn();  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+
+  						break;
+  						case 8:
+  						$('.ans_status').text('1');
+  					$('#81').fadeOut(1500,'linear',function(){
+  							$('#81').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#82').fadeOut(1500,'linear',function(){
+  							$('#82').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#83').fadeOut(1500,'linear',function(){
+  							$('#83').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#84').fadeOut(1500,'linear',function(){
+  							$('#84').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#85').fadeOut(1500,'linear',function(){
+  							$('#85').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#86').fadeOut(1500,'linear',function(){
+  							$('#86').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#87').fadeOut(1500,'linear',function(){
+  							$('#87').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('8');
+
+  								$('#88').fadeOut(1500,'linear',function(){
+  							$('#88').fadeIn();  						});
+  							});  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  						case 9:
+  						$('.ans_status').text('1');
+  					$('#91').fadeOut(1500,'linear',function(){
+  							$('#91').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('2');
+
+
+  								$('#92').fadeOut(1500,'linear',function(){
+  							$('#92').fadeIn(0,'liner',function(){
+  								$('.ans_status').text('3');
+
+  								$('#93').fadeOut(1500,'linear',function(){
+  							$('#93').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('4');
+
+  								$('#94').fadeOut(1500,'linear',function(){
+  							$('#94').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('5');
+
+  								$('#95').fadeOut(1500,'linear',function(){
+  							$('#95').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('6');
+
+  								$('#96').fadeOut(1500,'linear',function(){
+  							$('#96').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('7');
+
+  								$('#97').fadeOut(1500,'linear',function(){
+  							$('#97').fadeIn(0,'linear',function(){
+
+  								$('.ans_status').text('8');
+
+  								$('#98').fadeOut(1500,'linear',function(){
+  							$('#98').fadeIn(0,'linear',function(){
+  								$('.ans_status').text('9');
+
+  								$('#99').fadeOut(1500,'linear',function(){
+  							$('#99').fadeIn();  						});
+
+
+  						});  						});
+  							});  						});
+
+  							});  						});
+
+
+  							});  						});
+  							});  						});
+
+  							});  						});
+
+  							});
+  						});	
+
+
+  							});
+  						});
+  						break;
+  				}
+
+
+  				}, 14000);
+
+  				$('#test'+prev).hide('slow',function(){
+  				$('#test'+random).show("slow");});
+  				$('#your_answer'+random).css('width','30%');
+  				var barwidth = ac*20;
+  				$('#Bar').css('width',barwidth+"%");
+  				//$('#status').text('Levels Completed Yet: 0/4');
+  	//$('#answers').text('Questions Answered correctly: '+ac+'/'+questions);
+  				if(questions==5)
+  					{
+  						if(ac<5)
+  							{
+  								questions = 0;
+  						ac = 0;
+  						wa = 0;
+              $('#Bar').css('width',"0%");
+  								$("#tq1").text(questions);
+  				$("#tac1").text(ac);
+  				$("#twa1").text(wa);
+  								$('#incorrect').openModal();
+  							}
+  						else
+  						{
+  							//$('#correct').openModal();
+  							window.location.href = 'level2.html';
+  						}
+  					
+  					}
+  		});
+
+  	});
+
+  </script>
+  </body>
+  </html>

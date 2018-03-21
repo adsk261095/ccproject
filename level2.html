@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Subtraction Teaching</title>
+
+  <!-- CSS  -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    
+body {
+  background-image: url(final.jpg);
+}
+
+   
+
+    #myProgress,#Progress {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #E0FFFF;
+}
+
+#ans_status{
+  font-size:3.5em;
+}
+  
+.icon3{
+  height:5em;
+  width:5em;
+}
+
+#welcome{
+  font-size:2.5em;
+}
+
+#th1{
+  font-size: 3em;
+  font-color: black;
+
+}
+#testing{
+  display:none;
+  width:60%;
+}
+
+#tess{
+  width:70%;
+}
+
+#testnum1,#testnum2{
+  color : red;
+  font-size : 6em;
+  width :10%;
+}
+
+#signss{
+  width:80%;
+  padding-top:8%;
+}
+
+#heading{
+    display:none;
+    width:60%;
+  }
+
+#myBar{
+  position: absolute;
+  width: 33%;
+  height: 100%;
+  background-color: #00FFFF;
+}
+#Bar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: #00FFFF;
+}
+#b11,#b12{
+  display:none;
+}
+
+#scores{
+    display:none;
+    height:10%;
+    width:60%;
+  }
+
+  #status{
+      position:absolute;
+      right:10%;
+      top : 20%;
+      width:30%;
+    }
+
+    .compare{
+      height:5em;
+      width:5em;
+    }
+
+    
+    #proceed-btn{
+      position:relative;
+      bottom:20em;
+    }
+     body {
+  background-colour: green;
+}
+  </style>
+
+</head>
+<body>
+  
+  <div class = "modal" id = "modal1">
+    <div class="modal-content">
+    <h4 id = "modalheader2"><center>Congratulations you PASSED LEVEL ONE !</center></h4>
+    <p id = "modalfoot2">Now, watch tutorials for COMPARING -----> 3 image based tutorials<BR>Out of the 10 questions , answer 9 correctly to move to the next level .</p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>  
+
+  <div class = "modal" id = "correct">
+    <div class="mod">
+    <h4 id = "moda"><center>You Have Completed Your First Level Succesfully</center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>  
+
+
+  <div class = "modal" id = "incorrect">
+    <div class="mod">
+    <h4 id = "moda"><center>Sorry!! You Must do it again</center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>
+  <nav class="light-blue ghten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Level 2</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#"></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+      </nav>
+      
+
+    
+
+      
+
+
+
+
+    <div id = "tutorial1" class = "tutorials center">      
+    <h1 id = "th1">TUTORIAL -- > 1!! </h1>
+      
+    <h4 class="header center black-text" id = "welcome"> Which is the greater number? </h4>
+      
+<div class = "row">
+    <div id = "tnum11" class = "col s4">
+      <div id = "num11">
+     6
+    </div>
+    <div id = "balls11">
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img><BR>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    
+    </div>
+    </div>
+
+<div  class = 'col s4' id = "sign1">
+<img src = "great.png" id = 'sign11'>  
+</div>
+
+    <div id = "tnum12" class ="col s4">
+      <div id = "num12">
+      1
+    </div >
+    <div id = "balls12">
+    <img src="pizza.jpg" class = "icon2"></img>
+   
+    </div>
+    </div>
+
+</div>
+
+  <a class="answer-btn btn waves-effect waves-light orange any" id = "proceed_btn1">Proceed</a>      
+</div>
+
+    
+
+
+
+
+
+
+<div id = "tutorial2" class = "tutorials center">      
+    <h4 id = "th1">TUTORIAL --- > 2</h4>
+      <div id = "status">
+    Levels Completed Yet: 1/3<p>
+   
+    </p></div>
+   <center> <h4 class="header center black-text" id = "welcome2">Are the two numbers equal ?</h4>
+      
+<div class = "row">
+    <div id = "tnum21" class = "col s4">
+      <div id = "num21">
+      7
+    </div>
+    <div id = "balls21">
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img><BR>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    </div>
+    </div>
+<!-- End of number class -->
+<div  class = 'col s4' id = "sign2">
+<img src = "equal.png" id = 'sign21'>  
+</div>
+
+    <div id = "tnum22" class ="col s4">
+      <div id = "num22">
+      7
+    </div >
+    <div id = "balls22">
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img><BR>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    </div>
+    </div>
+
+</div>
+
+  <a class="answer-btn btn waves-effect waves-light orange any" id = "proceed_btn2">Proceed</a>      
+</div>
+<!-- end of tutorial -->
+  
+    
+
+
+
+<div id = "tutorial3" class = "tutorials center">      
+    <h4 id = "th1">TUTORIAL ---- > 3</h4>
+    <h4 class="header center black-text" id = "welcome3">Which number is smaller?</h4>
+      
+<div class = "row">
+    <div id = "tnum31" class = "col s4">
+      <div id = "num31">
+      1
+    </div>
+    <div id = "balls31">
+    <img src="pizza.jpg" class = "icon2"></img>
+    
+    </div>
+    </div>
+<!-- End of number class -->
+<div  class = 'col s4' id = "sign3">
+<img src = "less.png" id = 'sign31'>  
+</div>
+
+    <div id = "tnum32" class ="col s4">
+      <div id = "num32">
+      7
+    </div >
+    <div id = "balls32">
+    <img src="pizza.jpg" class = "icon2"></img> 
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <img src="pizza.jpg" class = "icon2"></img> 
+    <img src="pizza.jpg" class = "icon2"></img><BR>
+    <img src="pizza.jpg" class = "icon2"></img>
+    <!-- <img src="pizza.jpg" class = "icon2"></img> -->
+    <!-- <img src="pizza.jpg" class = "icon2"></img> -->
+    <img src="pizza.jpg" class = "icon2"></img>
+    </div>
+    </div>
+
+</div>
+
+<div id = "status">
+    Levels Completed Yet: 1/3<p>
+   
+    </p></div>
+
+  <a class="answer-btn btn waves-effect waves-light orange any" id = "proceed_btn3">Proceed</a>      
+</div>
+<!-- end of tutorial -->
+  
+  <div id = "scores" class = "center">
+        <div class = "row">
+          <div class = "col s4">
+                <h4 class="header center purple-text" >Questions Asked</h4><BR>
+                      <h4 class="header center red-text" id = "tq1">0</h4>
+          </div>
+          <div class = "col s4">
+                <h4 class="header center purple-text" >Correct Answers</h4><BR>
+                      <h4 class="header center red-text" id = "tac1">0</h4>
+          </div>
+          <div class = "col s4">
+                <h4 class="header center purple-text" >Wrong Answers</h4><BR>
+                      <h4 class="header center red-text" id = "twa1">0</h4>
+          </div>  
+        </div>
+
+      </div>
+
+<h3 class="header center black-text" id = "heading">Compare the numbers</h3>
+    
+    <div id = "testing">
+     <center>
+     <div id = "tess">
+      <div class = 'row'>
+        <div class = 'col s4' id = "testnum1">5</div>
+        <div class = 'col s4 center' id = "signss">
+<center>          
+
+         <img id = "lt" src = 'less.png' class = 'icon3'></img>
+          <img id = "eq" src = 'equal.png' class = 'icon3'></img>
+          <img id = "gt" src = 'great.png' class = 'icon3'></img>
+          
+        </center>
+        </div>
+        <div class = 'col s4' id = "testnum2">3</div>
+      </div>
+    
+    </div>
+</center>
+  <center><a class="answer-btn btn waves-effect waves-light orange any" id = "next-qstn">Next Question</a>  </center>
+    <BR>
+    <center>
+      <div id = "ans_status"></div>
+    </center>
+    </div>
+    
+    
+    
+
+
+      <script src="a.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type = "text/javascript">
+    $('document').ready(function(){
+      var flag = 0;
+      var f = 0;
+
+      var questions = 0;
+      var ac = 0;
+      var wa = 0;
+      var random1;
+      var random2;
+
+      random1 = Math.round(((Math.random())*10)) ;
+          random1 = (random1%9)+1;
+          random2 = Math.round(((Math.random())*10)) ;
+          random2 = (random2%9)+1;
+
+
+          $('#modal1').openModal();
+
+          $('#lt').click(function(){
+            // alert('lt');
+            if(f==0){
+              questions++;
+              f = 1;
+              if(random1<random2)
+                {ac++;
+                  $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                    
+                  $('#ans_status').text('Answer Correct');
+                    $('#ans_status').css('color','green');
+                  });
+                }
+              else
+                {
+                  wa++;
+                    $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                    $('#ans_status').text('Wrong Answer');
+                    $('#ans_status').css('color','red');
+                  });
+                    
+                }
+            $("#tq1").text(questions);
+          $("#tac1").text(ac);
+          $("#twa1").text(wa);
+             }
+          
+          });
+          
+          $('#gt').click(function(){
+            // alert('lt');
+          if(f==0){
+              questions++;
+              f = 1;
+              if(random1>random2)
+                {ac++;
+                  $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                    
+                  $('#ans_status').text('Answer Correct');
+                    $('#ans_status').css('color','green');
+                    
+                  });
+                }
+              else
+                {
+                  wa++;
+                    $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                        $('#ans_status').text('Wrong Answer');
+                    $('#ans_status').css('color','red');
+                
+                  });
+                }
+            $("#tq1").text(questions);
+          $("#tac1").text(ac);
+          $("#twa1").text(wa);
+             }
+          
+          });
+
+          $('#eq').click(function(){
+            // alert('lt');
+            if(f==0){
+              questions++;
+              f = 1;
+              if(random1==random2)
+                {ac++;
+                  $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                      $('#ans_status').text('Answer Correct');
+                    $('#ans_status').css('color','green');
+                
+                  });
+                  
+                }
+              else
+                {
+                  wa++;
+                    $('#ans_status').hide('slow',function(){
+                    $('#ans_status').show('slow');
+                        $('#ans_status').text('Wrong Answer');
+                    $('#ans_status').css('color','red');
+                
+                  });
+                }
+            $("#tq1").text(questions);
+          $("#tac1").text(ac);
+          $("#twa1").text(wa);
+             }
+          });
+          
+
+
+          $('#lt').hover(function(){
+            $(this).css('height','5.5em');
+            $(this).css('width','5.5em');
+            
+          },function(){
+
+            $(this).css('height','5em');
+            $(this).css('width','5em');
+          });
+
+
+          $('#gt').hover(function(){
+            $(this).css('height','5.5em');
+            $(this).css('width','5.5em');
+            
+          },function(){
+
+            $(this).css('height','5em');
+            $(this).css('width','5em');
+          });
+
+
+          $('#eq').hover(function(){
+            $(this).css('height','5.5em');
+            $(this).css('width','5.5em');
+            
+          },function(){
+
+            $(this).css('height','5em');
+            $(this).css('width','5em');
+          });
+
+
+          $('#proceed_btn1').click(function(){
+              if(flag == 0){
+                  
+                  flag = 1;
+                  $('#welcome').show('slow');
+              }
+              else
+              {
+                if(flag == 1)
+                {flag = 2;
+              $('#num11').show('slow');
+              $('#num12').show('slow'); 
+              }
+                else{
+                  if(flag == 2)
+                {    $('#balls11').show('slow');
+              $('#balls12').show('slow');
+                flag = 3;
+                }
+                else{
+                  if(flag == 3)
+                  {$('#sign11').show('slow');
+                    flag = 4;
+                    $('#proceed_btn1').text('Next Tutorial');
+                }
+          else{
+            $('#tutorial1').hide('slow',function(){
+            $('#tutorial2').show('slow');
+            flag = 0;
+        });
+        }
+              }
+
+               }}
+          });
+   
+          $('#proceed_btn2').click(function(){
+            
+              if(flag == 0){
+                  
+                  flag = 1;
+                  $('#welcome2').show('slow');
+              }
+              else
+              {
+                if(flag == 1)
+                {flag = 2;
+              $('#num21').show('slow');
+              $('#num22').show('slow'); 
+              }
+                else{
+                  if(flag == 2)
+                {    $('#balls21').show('slow');
+              $('#balls22').show('slow');
+                flag = 3;
+                }
+                else{
+                  if(flag == 3)
+                  {$('#sign21').show('slow');
+                    flag = 4;
+                  
+            $('#proceed_btn2').text('Next Tutorial');
+                }
+          else{
+            flag=0;
+            $('#tutorial2').hide('slow',function(){
+            $('#tutorial3').show('slow');
+        });
+        }
+              }
+
+               }}
+          });
+
+
+
+          $('#proceed_btn3').click(function(){
+            
+              if(flag == 0){
+                  
+                  flag = 1;
+                  $('#welcome3').show('slow');
+              }
+              else
+              {
+                if(flag == 1)
+                {flag = 2;
+              $('#num31').show('slow');
+              $('#num32').show('slow'); 
+              }
+                else{
+                  if(flag == 2)
+                {    $('#balls31').show('slow');
+              $('#balls32').show('slow');
+                flag = 3;
+                }
+                else{
+                  if(flag == 3)
+                  {$('#sign31').show('slow');
+                    flag = 4;
+                  $('#proceed_btn3').text('Take Test !!');
+                }
+          else{
+            $('#tutorial3').hide('slow',function(){
+            $("#tutorial1").css("width","40%");
+               $("#tutorial1").css("height","35%");
+          $("#welcome").css("font-size","1.5em");
+          $("#welcome").css("padding-bottom","10%");
+          $('#th1').addClass('center');
+          $('#tutorial1').css('position','absolute');
+          $('#tutorial1').css("right","1.5%");
+          $('#tutorial1').css("top","40%");
+          $('.icon2').css('height','4em');
+          $('.icon2').css('width','4em');
+          $('#sign11').css('height','3em');
+          $('#sign11').css('width','3em');
+          $('#tnum11').css('font-size','0.5em');
+          $('#tnum12').css('font-size','0.5em');
+            $('#tutorial1').show();
+            $('#proceed_btn1').hide();
+            });
+          $('#scores').show('slow',function(){
+          $('#heading').show('slow');
+          $('#testing').show('slow');
+            $('#testnum1').text(random1);
+            $('#testnum2').text(random2);
+            $('ans_status').hide();
+          });
+          
+        }
+              }
+
+               }}
+          });
+
+          $('#next-qstn').click(function(){
+            // alert(f);
+            if(f == 1){
+              
+            f = 0;
+            random1 = Math.round(((Math.random())*10)) ;
+          random1 = (random1%9)+1;
+          random2 = Math.round(((Math.random())*10)) ;
+          random2 = (random2%9)+1;
+
+            $('#testnum1').text(random1);
+            $('#testnum2').text(random2);
+            var barwidth = ac*10;
+          $('#Bar').css('width',barwidth+"%");
+          //$('#status').text('Levels Completed Yet: 0/4');
+    $('#answers').text('Questions Answered correctly: '+ac+'/'+questions);
+          if(questions==10)
+            {
+
+              if(ac<9)
+                {
+                  questions = 0;
+              ac = 0;
+              wa = 0;
+                  $("#tq1").text(questions);
+          $("#tac1").text(ac);
+          $("#twa1").text(wa);
+                  $('#incorrect').openModal();
+                $('#Bar').css('width',"0%");
+                }
+              else
+              {
+                //$('#correct').openModal();
+                window.location.href = 'level3.html';
+              }
+            
+            }
+}
+          });
+
+
+    });
+
+  </script>
+  </body>
+  </html>

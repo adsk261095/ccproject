@@ -1,0 +1,68 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.tutorials{
+  width:60%;
+  
+  padding-left:2%;
+  padding-top:2%;
+  padding-right:2%;
+  /*background-color:pink;*/
+}
+.icon2{
+    height:3.5em;
+    width :3.5em;
+  }
+
+#tnum11,#tnum21,#tnum31{
+/*background-color:red;
+*/width:40%;
+}
+#tnum12,#tnum22,#tnum31{
+	position:relative;
+	right:2%;
+
+width:40%;
+}
+#num11,#num12,#num21,#num22,#num31,#num32{
+	display:none;
+	font-size:3.5em;
+	color:blue;
+}
+
+  #th1,#th2,#th3{
+  	text-align:left;
+  	color:blue;
+  }
+
+  #sign11,#sign21,#sign31{
+  	display:none;
+	  	width:4.5em;
+  	height:5.5em;
+  	
+  }
+  #sign1,#sign2,#sign3{
+  	width:20%;
+  }
+
+
+  #welcome,#welcome2,#welcome3{
+  	display:none;
+  }
+  #balls11,#balls12,#balls21,#balls22,#balls31,#balls32{
+  	display:none;
+  }
+
+  #tutorial2,#tutorial3{display:none;}

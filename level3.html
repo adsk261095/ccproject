@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Subtraction Teaching</title>
+
+  <!-- CSS  -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+  
+.ans_status{
+    /*display:none;*/
+  padding-top:2%;
+  font-size:3.5em;
+}
+  #test{
+  	display:none;
+  }
+  #tut2{
+  	display:none;
+  }
+#t31,#t32{
+	text-align:left;
+	font-size:3em;
+	color:red;
+	}
+	#img1,#img2{
+		display:none;
+	}
+#wel1,#wel2{
+	display:none;
+}
+#test{
+width:60%;
+}
+#nums{
+	display:none;
+	font-size:5em;
+	color:blue;
+	width:60%;
+}
+#n1,#n2{
+	display:none;
+	font-size:5em;
+	color:blue;
+	width:60%;
+}
+#first1,#second1,#third1,#first2,#second2,#third2,#f,#s,#t{
+	width:33%;
+}
+#text1,#text2{
+	padding-top:2%;
+	font-size:3em;
+	color:red;
+	padding-bottom:2%;
+	display:none;
+}
+body {
+  background-image: url(sky.jpg);
+}
+
+.images{
+	height:5em;
+	width:5em;
+}
+
+#myBar{
+  position: absolute;
+  width: 67%;
+  height: 100%;
+  background-color: #00FFFF;
+}
+#Bar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: #00FFFF;
+}
+
+    #myProgress,#Progress {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #E0FFFF;
+}
+
+ #status{
+      /*display:none;*/
+      position:absolute;
+      right:10%;
+      top : 20%;
+      width:30%;
+    }
+#scores{
+    display:none;
+    height:10%;
+    width:60%;
+  }
+
+
+
+</style>
+
+</head>
+<body>
+  
+  <div class = "modal" id = "modal1">
+    <div class="modal-content">
+    <h4 id = "modalheader2"><center>CONGRATULATIONS! You passed Level 2</center></h4>
+    <p id = "modalfoot2">To learn subtraction , practice the following examples<BR>It will be followed by 10 questions - to pass you have to answer 9 CORRECTLY! </p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>  
+
+  <div class = "modal" id = "correct">
+    <div class="mod">
+    <h4 id = "moda"><center>You Have Completed Your Subtraction Learning Succesfully</center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>  
+
+
+  <div class = "modal" id = "incorrect">
+    <div class="mod">
+    <h4 id = "moda"><center>Seems like you failed! PLEASE TRY AGAIN ! ALL THE BEST </center></h4>
+    <p id = "modalfoot2"></p>
+  </div>
+  <div class="modal-footer" id = "modalfooter">
+   <div id = "counting" ><a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a></div>
+  </div>
+  </div>
+  <nav class="light-blue ghten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Level 3</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#"></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+      </nav>
+
+
+
+
+      <div id = "tut1" class = "tutorials center">      
+    <h5 id = "t31">EXAMPLE --->  1</h5>
+    <h4 class="header center orange-text" id = "wel1">Let us learn , HOW TO SUBTRACT</h4>
+     <div id = "n1" class = 'row'>
+     	<div id = "first1" class='col'>10</div>
+     	<div id = 'second1' class = 'col'>-</div>
+     	<div id = 'third1' class = 'col'>7</div>
+     </div> 
+     <div id = 'img1'>
+     	<img src = 'pizza.jpg' id = "im1" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im2" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im3" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im4" class = "images"></im><BR>
+     	<img src = 'pizza.jpg' id = "im5" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im6" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im7" class = "images"></im>
+      <img src = 'pizza.jpg' id = "im5" class = "images"></im>
+      <img src = 'pizza.jpg' id = "im6" class = "images"></im>
+      <img src = 'pizza.jpg' id = "im7" class = "images"></im>
+
+     </div>
+
+     <center><div id = "text1">
+     	We have 10 PIZZAS ! 
+     </div></center>
+  <a class="answer-btn btn waves-effect waves-light orange any" id = "btn31">Proceed</a>      
+</div>
+<!-- end of tutorial -->
+
+
+<div id = "tut2" class = "tutorials center">      
+    <h5 id = "t32">EXAMPLE --- > 2</h5>
+    <h4 class="header center orange-text" id = "wel2">Lets Subtract</h4>
+   <center>  <div id = "n2" class = 'row'>
+     	<div id = "first2" class='col'>8</div>
+     	<div id = 'second2' class = 'col'>-</div>
+     	<div id = 'third2' class = 'col'>3</div>
+     </div> </center>
+     <div id = 'img2'>
+     	<img src = 'pizza.jpg' id = "im21" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im22" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im23" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im24" class = "images"></im><BR>
+     	<img src = 'pizza.jpg' id = "im25" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im26" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im27" class = "images"></im>
+     	<img src = 'pizza.jpg' id = "im28" class = "images"></im>
+
+     </div>
+
+     <center><div id = "text2">
+     	Suppose we have 8 pizzas
+     </div></center>
+  <a class="answer-btn btn waves-effect waves-light orange any" id = "btn32">Proceed</a>      
+</div>
+<!-- end of tutorial -->
+
+
+
+
+
+<div id = "scores" class = "center">
+        <div class = "row">
+          <div class = "col s4">
+                <h4 class="header center blue-text" >Questions Asked</h4><BR>
+                      <h4 class="header center red-text" id = "tq1">0</h4>
+          </div>
+          <div class = "col s4">
+                <h4 class="header center blue-text" >Correct Answers</h4><BR>
+                      <h4 class="header center red-text" id = "tac1">0</h4>
+          </div>
+          <div class = "col s4">
+                <h4 class="header center blue-text" >Wrong Answers</h4><BR>
+                      <h4 class="header center red-text" id = "twa1">0</h4>
+          </div>  
+        </div>
+
+      </div>
+
+<div id = 'test'>
+
+
+
+<h4 class="header center orange-text" id = "testnumbers">Subtract the Numbers</h4>
+     <div id = "nums" class = 'row'>
+     	<div id = "f" class='col'>8</div>
+     	<div id = 's' class = 'col'>-</div>
+     	<div id = 't' class = 'col'>3</div>
+     </div>
+     <div class="input-field col answer-id">
+          <center><input id="your_answer" type="text" class="validate">
+          <label for="your_answer">Your Answer</label></center>
+        </div>
+        <center><a class="btn waves-effect waves-light orange" id = "answer-btn">Go</a></center>
+        <center>
+      <div class = "ans_status"></div>
+    </center>
+
+
+</div>
+	
+
+
+
+
+
+      <div id = "status">
+    Levels Completed Yet: 2/3<p>
+    
+
+<script src="a.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type = "text/javascript">
+  $(document).ready(function(){
+  	$('#modal1').openModal();
+  	var flag = 0;
+  		var i,x;
+  		var z = 0;
+
+  		var questions = 0;
+      var ac = 0;
+      var wa = 0;
+      var random1;
+      var random2;
+      var temp;
+      random1 = Math.round(((Math.random())*10)) ;
+          random1 = (random1%9)+1;
+          random2 = Math.round(((Math.random())*10)) ;
+          random2 = (random2%9)+1;
+          	if(random1<random2){
+          		temp = random2;
+          		random2 = random1;
+          		random1 = temp;
+          	}
+
+
+
+
+
+
+
+
+
+
+
+
+          	$('#answer-btn').click(function(){
+          		// alert("Prerna");
+
+              
+questions = questions+1;
+  			var ans = $('#your_answer').val();
+  			$('#your_answer').val('');
+
+  			if(ans == (random1-random2))
+  				{ac = ac+1;
+              $('.ans_status').text('Answer Correct');
+                    $('.ans_status').css('color','green');
+          }
+  			else
+  				{wa = wa+1;
+  				  $('.ans_status').text('Wrong Answer');
+                    $('.ans_status').css('color','red');
+          }
+  				$("#tq1").text(questions);
+  				$("#tac1").text(ac);
+  				$("#twa1").text(wa);
+  			random1 = Math.round(((Math.random())*10)) ;
+  				random1 = (random1%9)+1;
+  				random2 = Math.round(((Math.random())*10)) ;
+          random2 = (random2%9)+1;
+				if(random1<random2){
+          		temp = random2;
+          		random2 = random1;
+          		random1 = temp;
+          	}
+            setTimeout(function(){ $('.ans_status').text('suppose you have '+random1+' pizzas'); }, 6000);
+          setTimeout(function(){ $('.ans_status').text('delete '+random2+' pizzas from them'); }, 9500);
+          $('#test').hide('slow',function(){
+  				$('#f').text(random1);
+  				$('#t').text(random2);
+  				$('#test').show("slow");});
+  				$('#your_answer').css('width','30%');
+  				var barwidth = ac*10;
+  				$('#Bar').css('width',barwidth+"%");
+  				//$('#status').text('Levels Completed Yet: 0/4');
+  	$('#answers').text('Questions Answered correctly: '+ac+'/'+questions);
+  				if(questions==10)
+  					{
+  						if(ac<9)
+  							{
+  								questions = 0;
+  						ac = 0;
+  						wa = 0;
+  								$("#tq1").text(questions);
+  				$("#tac1").text(ac);
+  				$("#twa1").text(wa);
+  								$('#incorrect').openModal();
+  								$('#Bar').css('width',"0%");
+  							
+  							}
+  						else
+  						{
+  							$('#correct').openModal();
+  							window.location.href = 'firstpage.html';
+  						}
+  					
+  					}
+
+
+
+          	});
+
+
+
+
+
+
+
+
+
+
+
+  		$('#as').click(function(){
+  			// 
+  		});
+  		$('#btn31').click(function(){
+  			switch(flag){
+  			case 0 :
+  			 $('#wel1').show('slow');
+  			flag = 1;
+  			break;
+			case 1 :
+			$('#n1').show('slow');
+  			flag = 2;
+  			break;
+  			case 2 :
+			$('#text1').show('slow');
+  			flag = 3;
+  			break;
+  			case 3 :
+			$('#img1').show('slow');
+  			flag = 4;
+  			break;
+			case 4 :
+			$('#text1').hide('slow',function(){
+				$('#text1').text('We Will Delete 7 pizzas');
+				$('#text1').show('slow');
+			});
+			flag = 5;
+			break;
+			case 5:
+			$('#text1').text('deleting 7 pizzas');
+			for(i = 1;i <=7;i++){
+				
+				x=8-i;
+				$('#im'+x).hide(4000,function(){
+					$('#text1').hide('slow',function(){
+					$('#text1').text('pizzas left 3');
+					$('#text1').show('slow');
+				});
+				});
+				
+			}
+			flag = 6;
+			break;
+			case 6:
+				$('#text1').text('Answer is 3');
+					$('#text1').css('color','blue');
+						$('#btn31').text("next Tutorial");
+						flag = 7;
+						break;
+						case 7:
+							flag = 0;
+							$("#tut1").hide('slow',function(){
+							$("#tut2").show('slow');
+							
+						});
+					
+			}
+
+  		});
+
+  		$('#btn32').click(function(){
+  			switch(flag){
+  			case 0 :
+  			 $('#wel2').show('slow');
+  			flag = 1;
+  			break;
+			case 1 :
+			$('#n2').show('slow');
+  			flag = 2;
+  			break;
+  			case 2 :
+			$('#text2').show('slow');
+  			flag = 3;
+  			break;
+  			case 3 :
+			$('#img2').show('slow');
+  			flag = 4;
+  			break;
+			case 4 :
+			$('#text2').hide('slow',function(){
+				$('#text2').text('We Will Delete 3 pizzas');
+				$('#text2').show('slow');
+			});
+			flag = 5;
+			break;
+			case 5:
+			$('#text2').text('deleting 3 pizzas');
+			for(i = 1;i <=3;i++){
+				
+				x=9-i;
+				$('#im2'+x).hide(4000,function(){
+					$('#text2').hide('slow',function(){
+					$('#text2').text('pizzas left 5');
+					$('#text2').show('slow');
+				});
+				});
+				
+			}
+			flag = 6;
+			break;
+			case 6:
+				$('#text2').text('Answer is 5');
+					$('#text2').css('color','blue');
+						$('#btn32').text("Take Test !!");
+						flag = 7;
+						break;
+						case 7:
+            setTimeout(function(){ $('.ans_status').text('suppose you have '+random1+' pizzas'); }, 6000);
+          setTimeout(function(){ $('.ans_status').text('delete '+random2+' pizzas from them'); }, 9500);
+							$("#tut2").hide('slow',function(){
+							$("#scores").show('slow');
+							$('#test').show('slow');
+							$('#f').show('slow');
+							$('#s').show('slow');
+							$('#t').show('slow');
+							$('#nums').show('slow');
+							$('#tut2').css('width','30%');
+							$('#tut2').css('height','30%');
+							$('#tut2').css('position','absolute');
+							$('#tut2').css('right','10%');
+							$('#tut2').css('top','50%');
+							$('#tut2').show('slow');
+							$('#btn32').hide();
+							$('#your_answer').css('width','30%');
+							$('#t32').css('font-size','2.5em');
+							$('#n2').css('font-size','2.5em');
+							$('#text2').css('font-size','2.5em');
+							$('.images').css('height','3em');
+							$('.images').css('width','3em');
+							$('#wel2').hide();
+							$('#f').text(random1);
+							$('#t').text(random2);
+							for(z = 0;z<1000;z++){
+						$('#im26').show('slow');
+							$('#im27').show('slow');
+							$('#im28').show('slow');
+							for(i = 1;i <=3;i++){
+				x=9-i;
+				$('#im2'+x).hide(4000,function(){
+				});
+							}}
+							
+							
+						});
+					
+			}
+
+  		});
+
+
+  });
+  </script>
+
+      </body>
+      </html>
